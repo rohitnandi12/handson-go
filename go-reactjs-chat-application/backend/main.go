@@ -4,7 +4,7 @@ import (
     "fmt"
     "net/http"
 
-    "github.com/handson-go/go-reactjs-chat-application/backend/pkg/websocket"
+    "github.com/rohitnandi12/handson-go.git/go-reactjs-chat-application/backend/pkg/websocket"
 )
 
 // define our WebSocket endpoint
@@ -13,7 +13,7 @@ func serveWs(w http.ResponseWriter, r *http.Request) {
 
 	// upgrade this connection to a WebSocket
   	// connection
-	ws, err := websocket.Upgrade(w, r, nil)
+	ws, err := websocket.Upgrade(w, r)
 	if err != nil {
 		fmt.Fprintf(w, "%+V\n", err)
 	}
