@@ -18,3 +18,9 @@ RUN go build -o main .
 
 # Run the executable
 CMD ["/app/main"]
+
+# Command to build
+# backend> docker build -t backend . 
+
+# Commadn to run
+# backend> docker run -it -p 8080:8080 backend
